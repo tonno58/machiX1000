@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>machiX1000</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf6f0;
+      color: #333;
+    }
+    header {
+      background-color: #ffb6c1;
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #ffe4e1;
+      padding: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>machiX1000</header>
+  <nav>
+    <a href="#felice">Felice</a>
+    <a href="#triste">Triste</a>
+    <a href="#arrabbiata">Arrabbiata</a>
+    <a href="#sorpresa">Sorpresa</a>
+  </nav>
+
+  <section id="felice">
+    <h2 style="text-align:center;">Felice 😊</h2>
+    <div class="gallery">
+      <img src="img/felice1.jpg" alt="Felice 1" />
+      <img src="img/felice2.jpg" alt="Felice 2" />
+    </div>
+  </section>
+
+  <section id="triste">
+    <h2 style="text-align:center;">Triste 😢</h2>
+    <div class="gallery">
+      <img src="img/triste1.jpg" alt="Triste 1" />
+      <img src="img/triste2.jpg" alt="Triste 2" />
+    </div>
+  </section>
+
+  <section id="arrabbiata">
+    <h2 style="text-align:center;">Arrabbiata 😠</h2>
+    <div class="gallery">
+      <img src="img/arrabbiata1.jpg" alt="Arrabbiata 1" />
+      <img src="img/arrabbiata2.jpg" alt="Arrabbiata 2" />
+    </div>
+  </section>
+
+  <section id="sorpresa">
+    <h2 style="text-align:center;">Sorpresa 😲</h2>
+    <div class="gallery">
+      <img src="img/sorpresa1.jpg" alt="Sorpresa 1" />
+      <img src="img/sorpresa2.jpg" alt="Sorpresa 2" />
+    </div>
+  </section>
+</body>
+</html>
