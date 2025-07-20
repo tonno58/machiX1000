@@ -64,11 +64,22 @@
       max-width: 800px;
       margin: 0 auto;
     }
+
     section {
-      padding: 3rem 1rem;
-      border-top: 1px solid #f3d1db;
-      background-color: rgba(255,255,255,0.6);
+      display: flex;
+      justify-content: center;
+      padding: 4rem 1rem;
     }
+
+    .section-box {
+      background-color: rgba(255,255,255,0.85);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      max-width: 1100px;
+      width: 100%;
+    }
+
     h2 {
       text-align: center;
       margin-bottom: 1.5rem;
@@ -76,24 +87,26 @@
       font-family: 'Patrick Hand', cursive;
       font-size: 2rem;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 1.5rem;
-      padding: 1rem 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
+      padding: 1rem 0;
     }
+
     .gallery img, .gallery video {
       width: 100%;
-      border-radius: 8px;
+      border-radius: 12px;
       border: 8px solid #fff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
+
     .gallery img:hover, .gallery video:hover {
       transform: scale(1.03);
     }
+
     footer {
       background-color: #fff0f5;
       padding: 2rem;
@@ -124,59 +137,69 @@
   </div>
 
   <section id="felice">
-    <h2>Felice 😊</h2>
-    <div class="gallery">
-      <img src="img/IMG-20250720-WA0002.jpg" />
-      <img src="img/felice1.jpg" />
-      <img src="img/felice2.jpg" />
-      <video controls src="video/VID-20250720-WA0002.mp4"></video>
+    <div class="section-box">
+      <h2>Felice 😊</h2>
+      <div class="gallery">
+        <img src="img/IMG-20250720-WA0002.jpg" />
+        <img src="img/felice1.jpg" />
+        <img src="img/felice2.jpg" />
+        <video controls src="video/VID-20250720-WA0002.mp4"></video>
+      </div>
     </div>
   </section>
 
   <section id="triste">
-    <h2>Triste 😢 / Arrabbiata 😠</h2>
-    <div class="gallery">
-      <img src="img/IMG-20250720-WA0004.jpg" />
-      <img src="img/IMG-20250720-WA0011.jpg" />
-      <video controls src="video/rabbia.mp4"></video>
+    <div class="section-box">
+      <h2>Triste 😢 / Arrabbiata 😠</h2>
+      <div class="gallery">
+        <img src="img/IMG-20250720-WA0004.jpg" />
+        <img src="img/IMG-20250720-WA0011.jpg" />
+        <video controls src="video/rabbia.mp4"></video>
+      </div>
     </div>
   </section>
 
   <section id="sorpresa">
-    <h2>Sorpresa 😲 / Dolce 🥰</h2>
-    <div class="gallery">
-      <img src="img/IMG-20250720-WA0005.jpg" />
-      <img src="img/IMG-20250720-WA0009.jpg" />
-      <img src="img/IMG-20250720-WA0006.jpg" />
+    <div class="section-box">
+      <h2>Sorpresa 😲 / Dolce 🥰</h2>
+      <div class="gallery">
+        <img src="img/IMG-20250720-WA0005.jpg" />
+        <img src="img/IMG-20250720-WA0009.jpg" />
+        <img src="img/IMG-20250720-WA0006.jpg" />
+      </div>
     </div>
   </section>
 
   <section id="star">
-    <h2>Star ⭐</h2>
-    <div class="gallery">
-      <img src="img/IMG-20250720-WA0007.jpg" />
-      <img src="img/IMG-20250720-WA0003.jpg" />
-      <img src="img/IMG-20250720-WA0008.jpg" />
-      <img src="img/star.jpg" />
-      <video controls src="video/VID-20250720-WA0001.mp4"></video>
+    <div class="section-box">
+      <h2>Star ⭐</h2>
+      <div class="gallery">
+        <img src="img/IMG-20250720-WA0007.jpg" />
+        <img src="img/IMG-20250720-WA0003.jpg" />
+        <img src="img/IMG-20250720-WA0008.jpg" />
+        <img src="img/star.jpg" />
+        <video controls src="video/VID-20250720-WA0001.mp4"></video>
+      </div>
     </div>
   </section>
 
   <section id="divertenti">
-    <h2>Cose che mi divertono 😂</h2>
-    <div class="gallery">
-      <img src="img/IMG-20250720-WA0001.jpg" />
-      <img src="img/IMG-20250720-WA0010.jpg" />
-      <img src="img/divertente1.jpg" />
-      <video controls src="video/divertente2.mp4"></video>
-      <video controls src="video/VID-20250720-WA0003.mp4"></video>
+    <div class="section-box">
+      <h2>Cose che mi divertono 😂</h2>
+      <div class="gallery">
+        <img src="img/IMG-20250720-WA0001.jpg" />
+        <img src="img/IMG-20250720-WA0010.jpg" />
+        <img src="img/divertente1.jpg" />
+        <video controls src="video/divertente2.mp4"></video>
+        <video controls src="video/VID-20250720-WA0003.mp4"></video>
+      </div>
     </div>
   </section>
 
   <footer>
     <h2>Per il tuo compleanno 🎁</h2>
     <p>
-      Non importa in che momento siamo della nostra storia, ogni parte di te merita di essere ricordata e amata.
+      Non importa in che momento siamo della nostra storia, ogni parte di te merita di essere ricordata e amata.<br>
       Questo sito è il mio modo per dirti che ogni tuo sguardo, ogni tua emozione, ha sempre avuto (e sempre avrà) un posto nel mio cuore.
     </p>
   </footer>
