@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>machiX1000</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,6 +26,9 @@
       font-size: 2.5rem;
       font-weight: bold;
       color: #aa336a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav {
       display: flex;
@@ -33,14 +39,19 @@
       padding: 1rem;
       border-top: 2px solid #ffc0cb;
       border-bottom: 2px solid #ffc0cb;
+      position: sticky;
+      top: 84px;
+      z-index: 999;
     }
     nav a {
       text-decoration: none;
       color: #aa336a;
       font-weight: bold;
+      transition: color 0.2s;
     }
     nav a:hover {
       text-decoration: underline;
+      color: #cc0066;
     }
     section {
       padding: 2rem 1rem;
@@ -48,6 +59,7 @@
     h2 {
       text-align: center;
       margin-bottom: 1rem;
+      color: #aa336a;
     }
     .gallery {
       display: grid;
@@ -60,6 +72,12 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+    .intro {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
     footer {
       background-color: #fff0f5;
       padding: 2rem;
@@ -67,23 +85,31 @@
       font-style: italic;
       color: #555;
       border-top: 2px solid #ffc0cb;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>machiX1000</header>
   <nav>
-    <a href="#felice">Felice</a>
-    <a href="#triste">Triste / Arrabbiata</a>
-    <a href="#sorpresa">Dolce / Sorpresa</a>
-    <a href="#star">Star</a>
-    <a href="#divertenti">Cose che mi divertono</a>
+    <a href="#felice">Felice 😊</a>
+    <a href="#triste">Triste / Arrabbiata 😢😠</a>
+    <a href="#sorpresa">Dolce / Sorpresa 🥰😲</a>
+    <a href="#star">Star ⭐</a>
+    <a href="#divertenti">Cose che mi divertono 😂</a>
   </nav>
+  <div class="intro">
+    <p>Lo volevi da tanto tempo, e alla fine eccolo qui.<br>
+  Un posto tutto tuo, che raccoglie le tue espressioni, i tuoi momenti, le parti di te che mi hanno sempre colpito e fatto sorridere.<br>
+  Non è solo un regalo, è qualcosa che volevo davvero creare per te.</p>
+  </div>
 
   <section id="felice">
     <h2>Felice 😊</h2>
     <div class="gallery">
       <img src="img/IMG-20250720-WA0002.jpg" />
+      <img src="img/felice1.jpg" />
+      <img src="img/felice2.jpg" />
       <video controls src="video/VID-20250720-WA0002.mp4"></video>
     </div>
   </section>
@@ -93,6 +119,7 @@
     <div class="gallery">
       <img src="img/IMG-20250720-WA0004.jpg" />
       <img src="img/IMG-20250720-WA0011.jpg" />
+      <video controls src="video/rabbia.mp4"></video>
     </div>
   </section>
 
@@ -111,6 +138,7 @@
       <img src="img/IMG-20250720-WA0007.jpg" />
       <img src="img/IMG-20250720-WA0003.jpg" />
       <img src="img/IMG-20250720-WA0008.jpg" />
+      <img src="img/star.jpg" />
       <video controls src="video/VID-20250720-WA0001.mp4"></video>
     </div>
   </section>
@@ -120,6 +148,8 @@
     <div class="gallery">
       <img src="img/IMG-20250720-WA0001.jpg" />
       <img src="img/IMG-20250720-WA0010.jpg" />
+      <img src="img/divertente1.jpg" />
+      <video controls src="video/divertente2.mp4"></video>
       <video controls src="video/VID-20250720-WA0003.mp4"></video>
     </div>
   </section>
