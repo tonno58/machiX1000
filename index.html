@@ -56,6 +56,35 @@
       text-decoration: underline;
       color: #cc0066;
     }
+    .music-box {
+      position: fixed;
+      top: 140px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,240,245,0.9);
+      padding: 6px 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 0.9rem;
+      color: #aa336a;
+      z-index: 2000;
+    }
+    #playBtn {
+      background: #ff8fb0;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    #playBtn:hover {
+      background: #cc0066;
+      color: #fff;
+    }
     .intro {
       text-align: center;
       padding: 2rem 1rem 1rem;
@@ -64,22 +93,23 @@
       max-width: 800px;
       margin: 0 auto;
     }
-
     section {
       display: flex;
       justify-content: center;
       padding: 4rem 1rem;
     }
-
     .section-box {
       background-color: rgba(255,255,255,0.85);
       padding: 2rem;
       border-radius: 20px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
       max-width: 1100px;
       width: 100%;
+      transition: transform 0.3s ease;
     }
-
+    .section-box:hover {
+      transform: translateY(-4px);
+    }
     h2 {
       text-align: center;
       margin-bottom: 1.5rem;
@@ -87,26 +117,23 @@
       font-family: 'Patrick Hand', cursive;
       font-size: 2rem;
     }
-
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 1.5rem;
       padding: 1rem 0;
     }
-
     .gallery img, .gallery video {
       width: 100%;
       border-radius: 12px;
       border: 8px solid #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .gallery img:hover, .gallery video:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
-
     footer {
       background-color: #fff0f5;
       padding: 2rem;
@@ -128,6 +155,15 @@
     <a href="#divertenti">Cose che mi divertono 😂</a>
   </nav>
 
+  <div class="music-box">
+    <span class="music-text">Questa mi ricorda sempre di te 😠 ➡️</span>
+    <button id="playBtn">🎵</button>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="audio/baile-inolvidable.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="intro">
     <p>
       Lo volevi da tanto tempo, e alla fine eccolo qui.<br>
@@ -136,64 +172,49 @@
     </p>
   </div>
 
-  <section id="felice">
-    <div class="section-box">
-      <h2>Felice 😊</h2>
-      <div class="gallery">
-        <img src="img/IMG-20250720-WA0002.jpg" />
-        <img src="img/felice1.jpg" />
-        <img src="img/felice2.jpg" />
-        <video controls src="video/VID-20250720-WA0002.mp4"></video>
-      </div>
-    </div>
+  <section id="felice"><div class="section-box"><h2>Felice 😊</h2>
+    <div class="gallery">
+      <img src="img/IMG-20250720-WA0002.jpg" />
+      <img src="img/felice1.jpg" />
+      <img src="img/felice2.jpg" />
+      <video controls src="video/VID-20250720-WA0002.mp4"></video>
+    </div></div>
   </section>
 
-  <section id="triste">
-    <div class="section-box">
-      <h2>Triste 😢 / Arrabbiata 😠</h2>
-      <div class="gallery">
-        <img src="img/IMG-20250720-WA0004.jpg" />
-        <img src="img/IMG-20250720-WA0011.jpg" />
-        <video controls src="video/rabbia.mp4"></video>
-      </div>
-    </div>
+  <section id="triste"><div class="section-box"><h2>Triste 😢 / Arrabbiata 😠</h2>
+    <div class="gallery">
+      <img src="img/IMG-20250720-WA0004.jpg" />
+      <img src="img/IMG-20250720-WA0011.jpg" />
+      <video controls src="video/rabbia.mp4"></video>
+    </div></div>
   </section>
 
-  <section id="sorpresa">
-    <div class="section-box">
-      <h2>Sorpresa 😲 / Dolce 🥰</h2>
-      <div class="gallery">
-        <img src="img/IMG-20250720-WA0005.jpg" />
-        <img src="img/IMG-20250720-WA0009.jpg" />
-        <img src="img/IMG-20250720-WA0006.jpg" />
-      </div>
-    </div>
+  <section id="sorpresa"><div class="section-box"><h2>Sorpresa 😲 / Dolce 🥰</h2>
+    <div class="gallery">
+      <img src="img/IMG-20250720-WA0005.jpg" />
+      <img src="img/IMG-20250720-WA0009.jpg" />
+      <img src="img/IMG-20250720-WA0006.jpg" />
+    </div></div>
   </section>
 
-  <section id="star">
-    <div class="section-box">
-      <h2>Star ⭐</h2>
-      <div class="gallery">
-        <img src="img/IMG-20250720-WA0007.jpg" />
-        <img src="img/IMG-20250720-WA0003.jpg" />
-        <img src="img/IMG-20250720-WA0008.jpg" />
-        <img src="img/star.jpg" />
-        <video controls src="video/VID-20250720-WA0001.mp4"></video>
-      </div>
-    </div>
+  <section id="star"><div class="section-box"><h2>Star ⭐</h2>
+    <div class="gallery">
+      <img src="img/IMG-20250720-WA0007.jpg" />
+      <img src="img/IMG-20250720-WA0003.jpg" />
+      <img src="img/IMG-20250720-WA0008.jpg" />
+      <img src="img/star.jpg" />
+      <video controls src="video/VID-20250720-WA0001.mp4"></video>
+    </div></div>
   </section>
 
-  <section id="divertenti">
-    <div class="section-box">
-      <h2>Cose che mi divertono 😂</h2>
-      <div class="gallery">
-        <img src="img/IMG-20250720-WA0001.jpg" />
-        <img src="img/IMG-20250720-WA0010.jpg" />
-        <img src="img/divertente1.jpg" />
-        <video controls src="video/divertente2.mp4"></video>
-        <video controls src="video/VID-20250720-WA0003.mp4"></video>
-      </div>
-    </div>
+  <section id="divertenti"><div class="section-box"><h2>Cose che mi divertono 😂</h2>
+    <div class="gallery">
+      <img src="img/IMG-20250720-WA0001.jpg" />
+      <img src="img/IMG-20250720-WA0010.jpg" />
+      <img src="img/divertente1.jpg" />
+      <video controls src="video/divertente2.mp4"></video>
+      <video controls src="video/VID-20250720-WA0003.mp4"></video>
+    </div></div>
   </section>
 
   <footer>
@@ -203,5 +224,20 @@
       Questo sito è il mio modo per dirti che ogni tuo sguardo, ogni tua emozione, ha sempre avuto (e sempre avrà) un posto nel mio cuore.
     </p>
   </footer>
+
+  <script>
+    const btn = document.getElementById('playBtn');
+    const music = document.getElementById('bg-music');
+
+    btn.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+        btn.textContent = "⏸";
+      } else {
+        music.pause();
+        btn.textContent = "🎵";
+      }
+    });
+  </script>
 </body>
 </html>
